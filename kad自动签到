@@ -1,0 +1,13 @@
+import requests
+
+s = requests.Session()
+url = "https://user.360kad.com/Login/AjaxLoginV2"
+body = {'userName':'15538180708','pass':'12345678'}
+DL = s.post(url,data=body)
+print(DL.text)
+# 登录DL
+
+url = "https://user.360kad.com/Integral/GetDayIntegral?_=1593339453869"
+respqd = s.get(url)
+print(respqd.text)
+# 签到qd
